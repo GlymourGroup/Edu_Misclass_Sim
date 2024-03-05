@@ -33,9 +33,10 @@ replace dead=0 if deathcert==0
 gen educ3=educ if dead==0
 replace educ3=educ2 if dead==1
 gen educ3gt0=educ3>0
-```
+
 sum
 logit dead i.educ, or
 logit dead i.educ3, or
 logit dead educgt0, or
 logit dead educ3gt0, or
+```
